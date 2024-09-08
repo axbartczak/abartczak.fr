@@ -17,6 +17,8 @@ body ul {
     color: white;
     text-align: center;
     font-size: 30px;
+    clip-path: polygon(100% 0%, 100% 70%, 50% 90%, 50% 90%, 0 70%, 0 0);
+    padding-bottom: 300px;
 }
 
 #profile>ul>li {
