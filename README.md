@@ -6,4 +6,4 @@
 - [x] Add style to profile
 - [x] Add style to main sections
 - [ ] Implement footer
-- [ ] Host Project online
+- [x] Host Project online
