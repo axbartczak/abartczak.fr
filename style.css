@@ -2,6 +2,8 @@ body {
     font-family: "Iceland", sans-serif;
     font-weight: 400;
     font-style: normal;
+    margin: 0;
+    padding: 0;
 }
 
 body ul {
@@ -9,10 +11,32 @@ body ul {
     padding-inline-start: 0px;
 }
 
+#container {
+    width: 1150px;
+    position: relative;
+    margin: auto;
+    background-color: seashell;
+    height: 1580px;
+}
+
+#title {
+    position: absolute;
+    background-color: aqua;
+    width: 100%;
+    font-size: 30px;
+    text-align: right;
+    top: 105px;
+}
+
+#title h1 {
+    right: 10%;
+    position: relative;
+}
+
 #profile {
     background-color: #00008B;
     width: 430px;
-    position: relative;
+    position: absolute;
     left: 80px;
     color: white;
     text-align: center;
@@ -29,4 +53,93 @@ body ul {
     width: 50%;
     position: relative;
     margin-top: 105px;
+}
+
+.section {
+    background-color: grey;
+    text-align: center;
+    font-size: 30px;
+    padding: 30px;
+    width: 35%;
+}
+
+.section>ul>li {
+    margin-bottom: 30px;
+}
+
+#grid {
+    display: grid;
+    grid-gap: 90px;
+    grid-template-areas:
+        ". experiences"
+        "perks training";
+    position: relative;
+    top: 355px;
+    grid-auto-columns: 1fr;
+    padding: 0 80px 0 80px;
+}
+
+#grid .section {
+    width: 400px;
+
+}
+
+@media screen and (max-width: 768px) {
+    #container {
+        width: auto;
+        position: relative;
+        background-color: seashell;
+        height: auto;
+    }
+
+    #title {
+        position: relative;
+        background-color: aqua;
+        width: 100%;
+        font-size: 30px;
+        text-align: center;
+        top: 0px;
+    }
+
+    #title h1 {
+        right: 0%;
+        position: relative;
+        margin: 0;
+        padding: 20px;
+    }
+
+    #profile {
+        left: 0;
+        width: 100%;
+    }
+
+    #grid {
+        position: relative;
+        grid-template-areas:
+            "experiences"
+            "training"
+            "perks";
+        margin-top: -60px;
+        top: 1050px;
+        left: 0px;
+        grid-gap: 20px;
+        padding: 0;
+    }
+
+    #grid .section {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+#experiences {
+    grid-area: experiences;
+}
+
+#perks {
+    grid-area: perks;
+}
+
+#training {
+    grid-area: training;
 }
